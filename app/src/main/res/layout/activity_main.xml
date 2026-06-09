@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="اختر نوع التصميم"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="40dp"/>
+
+        <Button
+            android:id="@+id/btnGoToRelative"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="الشاشة الأولى (RelativeLayout)"
+            android:textSize="16sp"
+            android:backgroundTint="@color/teal_primary"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:id="@+id/btnGoToConstraint"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="الشاشة الثانية (ConstraintLayout)"
+            android:textSize="16sp"
+            android:backgroundTint="@color/teal_dark"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

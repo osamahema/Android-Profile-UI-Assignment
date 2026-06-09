@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="profile_image_size">120dp</dimen>
+    <dimen name="card_corner_radius">16dp</dimen>
+    <dimen name="bottom_nav_height">60dp</dimen>
+    <dimen name="menu_item_padding">16dp</dimen>
+</resources>
