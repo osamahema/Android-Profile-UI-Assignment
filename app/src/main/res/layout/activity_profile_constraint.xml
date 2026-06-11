@@ -8,58 +8,97 @@
 
     <ImageView
         android:id="@+id/btnBack"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:background="@drawable/bg_stats_card"
+        android:backgroundTint="@color/white"
+        android:elevation="2dp"
+        android:padding="8dp"
         android:src="@drawable/ic_arrow_back"
         app:tint="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="Back"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/btnEdit"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="16dp"
+        android:background="@drawable/bg_stats_card"
+        android:backgroundTint="@color/white"
+        android:elevation="2dp"
+        android:padding="8dp"
         android:src="@drawable/ic_edit"
         app:tint="@color/teal_primary"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="Edit"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/profileImage"
         android:layout_width="110dp"
         android:layout_height="110dp"
         android:layout_marginTop="20dp"
-        android:src="@drawable/profile_pic"
         android:background="@drawable/circle_border_green"
-        android:scaleType="centerCrop"
         android:clipToOutline="true"
-        app:layout_constraintTop_toBottomOf="@id/btnBack"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile_pic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnBack" />
+
+    <ImageView
+        android:id="@+id/star3"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/baseline_star_24"
+        app:tint="#FFC107"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:contentDescription="Profile"/>
+        app:layout_constraintTop_toBottomOf="@id/profileImage" />
 
-    <LinearLayout
-        android:id="@+id/starsLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/profileImage"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+    <ImageView
+        android:id="@+id/star2"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="4dp"
+        android:src="@drawable/baseline_star_24"
+        app:tint="#FFC107"
+        app:layout_constraintEnd_toStartOf="@id/star3"
+        app:layout_constraintTop_toTopOf="@id/star3" />
 
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⭐" android:textSize="20sp"/>
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⭐" android:textSize="20sp"/>
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⭐" android:textSize="20sp"/>
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⭐" android:textSize="20sp"/>
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⭐" android:textSize="20sp"/>
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/star1"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="4dp"
+        android:src="@drawable/baseline_star_24"
+        app:tint="#FFC107"
+        app:layout_constraintEnd_toStartOf="@id/star2"
+        app:layout_constraintTop_toTopOf="@id/star3" />
+
+    <ImageView
+        android:id="@+id/star4"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/baseline_star_24"
+        app:tint="#FFC107"
+        app:layout_constraintStart_toEndOf="@id/star3"
+        app:layout_constraintTop_toTopOf="@id/star3" />
+
+    <ImageView
+        android:id="@+id/star5"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/baseline_star_24"
+        app:tint="#FFC107"
+        app:layout_constraintStart_toEndOf="@id/star4"
+        app:layout_constraintTop_toTopOf="@id/star3" />
 
     <TextView
         android:id="@+id/tvName"
@@ -67,12 +106,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Johan Smith"
+        android:textColor="@color/black"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/starsLayout"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/star3" />
 
     <TextView
         android:id="@+id/tvLocation"
@@ -80,152 +119,516 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="California, USA"
-        android:textSize="15sp"
         android:textColor="@color/gray_text"
-        app:layout_constraintTop_toBottomOf="@id/tvName"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
 
-    <LinearLayout
-        android:id="@+id/statsContainer"
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardBalance"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="90dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="25dp"
-        android:layout_marginEnd="20dp"
-        android:orientation="horizontal"
-        android:weightSum="3"
-        app:layout_constraintTop_toBottomOf="@id/tvLocation"
+        android:layout_marginEnd="8dp"
+        app:cardBackgroundColor="@color/teal_primary"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toStartOf="@id/cardOrders"
+        app:layout_constraintTop_toBottomOf="@id/tvLocation">
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:background="@drawable/bg_stats_card"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:layout_marginEnd="8dp">
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Balance" android:textColor="@color/white" android:textSize="13sp"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00.00" android:textColor="@color/white" android:textStyle="bold" android:textSize="16sp" android:layout_marginTop="4dp"/>
-        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:background="@drawable/bg_stats_card"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp">
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Orders" android:textColor="@color/white" android:textSize="13sp"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10" android:textColor="@color/white" android:textStyle="bold" android:textSize="16sp" android:layout_marginTop="4dp"/>
-        </LinearLayout>
+            <TextView
+                android:id="@+id/tvBalLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Balance"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:background="@drawable/bg_stats_card"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:layout_marginStart="8dp">
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total Spent" android:textColor="@color/white" android:textSize="13sp"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="000.0" android:textColor="@color/white" android:textStyle="bold" android:textSize="16sp" android:layout_marginTop="4dp"/>
-        </LinearLayout>
-    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvBalLabel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:text="00.00"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardOrders"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:cardBackgroundColor="@color/teal_primary"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintStart_toEndOf="@id/cardBalance"
+        app:layout_constraintEnd_toStartOf="@id/cardTotal"
+        app:layout_constraintTop_toTopOf="@id/cardBalance">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvOrdLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Orders"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvOrdLabel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:text="10"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardTotal"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="20dp"
+        app:cardBackgroundColor="@color/teal_primary"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintStart_toEndOf="@id/cardOrders"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/cardBalance">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvTotLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Total Spent"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvTotLabel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:text="000.0"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
 
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="20dp"
-        android:fillViewport="true"
         android:scrollbars="none"
-        app:layout_constraintTop_toBottomOf="@id/statsContainer"
         app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/cardBalance">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:gravity="center_vertical">
-                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/baseline_person_24" app:tint="@color/teal_primary" android:contentDescription="Info"/>
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="16dp" android:text="Personal Information" android:textSize="16sp" android:textColor="@color/black"/>
-                <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/outline_arrow_forward_ios_24" app:tint="@color/gray_text" android:contentDescription="Arrow"/>
-            </LinearLayout>
-            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+            <ImageView
+                android:id="@+id/i1"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/baseline_person_24"
+                app:tint="@color/teal_primary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:gravity="center_vertical">
-                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/baseline_shopping_cart_24" app:tint="@color/teal_primary" android:contentDescription="Order"/>
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="16dp" android:text="Your Order" android:textSize="16sp" android:textColor="@color/black"/>
-                <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/outline_arrow_forward_ios_24" app:tint="@color/gray_text" android:contentDescription="Arrow"/>
-            </LinearLayout>
-            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+            <TextView
+                android:id="@+id/t1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Personal Information"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/i1"
+                app:layout_constraintEnd_toStartOf="@id/arr1"
+                app:layout_constraintStart_toEndOf="@id/i1"
+                app:layout_constraintTop_toTopOf="@id/i1" />
 
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:gravity="center_vertical">
-                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/baseline_favorite_24" app:tint="@color/teal_primary" android:contentDescription="Fav"/>
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="16dp" android:text="Your Favourites" android:textSize="16sp" android:textColor="@color/black"/>
-                <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/outline_arrow_forward_ios_24" app:tint="@color/gray_text" android:contentDescription="Arrow"/>
-            </LinearLayout>
-            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+            <ImageView
+                android:id="@+id/arr1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/outline_arrow_forward_ios_24"
+                app:tint="@color/gray_text"
+                app:layout_constraintBottom_toBottomOf="@id/i1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/i1" />
 
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:gravity="center_vertical">
-                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/baseline_payment_24" app:tint="@color/teal_primary" android:contentDescription="Pay"/>
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="16dp" android:text="Payment" android:textSize="16sp" android:textColor="@color/black"/>
-                <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/outline_arrow_forward_ios_24" app:tint="@color/gray_text" android:contentDescription="Arrow"/>
-            </LinearLayout>
-            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+            <View
+                android:id="@+id/d1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="#EEEEEE"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/i1" />
 
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:gravity="center_vertical">
-                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/outline_store_24" app:tint="@color/teal_primary" android:contentDescription="Shop"/>
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="16dp" android:text="Recommended Shops" android:textSize="16sp" android:textColor="@color/black"/>
-                <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/outline_arrow_forward_ios_24" app:tint="@color/gray_text" android:contentDescription="Arrow"/>
-            </LinearLayout>
-            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+            <ImageView
+                android:id="@+id/i2"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/baseline_shopping_cart_24"
+                app:tint="@color/teal_primary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/d1" />
 
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:gravity="center_vertical">
-                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/baseline_location_on_24" app:tint="@color/teal_primary" android:contentDescription="Loc"/>
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="16dp" android:text="Nearest Shop" android:textSize="16sp" android:textColor="@color/black"/>
-                <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/outline_arrow_forward_ios_24" app:tint="@color/gray_text" android:contentDescription="Arrow"/>
-            </LinearLayout>
-            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+            <TextView
+                android:id="@+id/t2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Your Order"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/i2"
+                app:layout_constraintEnd_toStartOf="@id/arr2"
+                app:layout_constraintStart_toEndOf="@id/i2"
+                app:layout_constraintTop_toTopOf="@id/i2" />
 
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:gravity="center_vertical">
-                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/outline_logout_24" app:tint="@color/teal_primary" android:contentDescription="Logout"/>
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="16dp" android:text="Logout" android:textSize="16sp" android:textColor="@color/black"/>
-            </LinearLayout>
-        </LinearLayout>
+            <ImageView
+                android:id="@+id/arr2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/outline_arrow_forward_ios_24"
+                app:tint="@color/gray_text"
+                app:layout_constraintBottom_toBottomOf="@id/i2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/i2" />
+
+            <View
+                android:id="@+id/d2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="#EEEEEE"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/i2" />
+
+            <ImageView
+                android:id="@+id/i3"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/baseline_favorite_24"
+                app:tint="@color/teal_primary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/d2" />
+
+            <TextView
+                android:id="@+id/t3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Your Favourites"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/i3"
+                app:layout_constraintEnd_toStartOf="@id/arr3"
+                app:layout_constraintStart_toEndOf="@id/i3"
+                app:layout_constraintTop_toTopOf="@id/i3" />
+
+            <ImageView
+                android:id="@+id/arr3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/outline_arrow_forward_ios_24"
+                app:tint="@color/gray_text"
+                app:layout_constraintBottom_toBottomOf="@id/i3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/i3" />
+
+            <View
+                android:id="@+id/d3"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="#EEEEEE"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/i3" />
+
+            <ImageView
+                android:id="@+id/i4"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/baseline_payment_24"
+                app:tint="@color/teal_primary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/d3" />
+
+            <TextView
+                android:id="@+id/t4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Payment"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/i4"
+                app:layout_constraintEnd_toStartOf="@id/arr4"
+                app:layout_constraintStart_toEndOf="@id/i4"
+                app:layout_constraintTop_toTopOf="@id/i4" />
+
+            <ImageView
+                android:id="@+id/arr4"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/outline_arrow_forward_ios_24"
+                app:tint="@color/gray_text"
+                app:layout_constraintBottom_toBottomOf="@id/i4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/i4" />
+
+            <View
+                android:id="@+id/d4"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="#EEEEEE"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/i4" />
+
+            <ImageView
+                android:id="@+id/i5"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/outline_store_24"
+                app:tint="@color/teal_primary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/d4" />
+
+            <TextView
+                android:id="@+id/t5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Recommended Shops"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/i5"
+                app:layout_constraintEnd_toStartOf="@id/arr5"
+                app:layout_constraintStart_toEndOf="@id/i5"
+                app:layout_constraintTop_toTopOf="@id/i5" />
+
+            <ImageView
+                android:id="@+id/arr5"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/outline_arrow_forward_ios_24"
+                app:tint="@color/gray_text"
+                app:layout_constraintBottom_toBottomOf="@id/i5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/i5" />
+
+            <View
+                android:id="@+id/d5"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="#EEEEEE"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/i5" />
+
+            <ImageView
+                android:id="@+id/i6"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/baseline_location_on_24"
+                app:tint="@color/teal_primary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/d5" />
+
+            <TextView
+                android:id="@+id/t6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Nearest Shop"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/i6"
+                app:layout_constraintEnd_toStartOf="@id/arr6"
+                app:layout_constraintStart_toEndOf="@id/i6"
+                app:layout_constraintTop_toTopOf="@id/i6" />
+
+            <ImageView
+                android:id="@+id/arr6"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/outline_arrow_forward_ios_24"
+                app:tint="@color/gray_text"
+                app:layout_constraintBottom_toBottomOf="@id/i6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/i6" />
+
+            <View
+                android:id="@+id/d6"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="#EEEEEE"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/i6" />
+
+            <ImageView
+                android:id="@+id/i7"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/outline_logout_24"
+                app:tint="@color/teal_primary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/d6" />
+
+            <TextView
+                android:id="@+id/t7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Logout"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/i7"
+                app:layout_constraintStart_toEndOf="@id/i7"
+                app:layout_constraintTop_toTopOf="@id/i7" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottomNav"
         android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:background="@drawable/bg_bottom_nav"
-        android:orientation="horizontal"
-        android:gravity="center"
+        android:layout_height="70dp"
+        android:background="#F5F5F5"
         android:elevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@drawable/ic_home" app:tint="@color/gray_text" android:contentDescription="Home"/>
-        <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@drawable/baseline_person_24" app:tint="@color/teal_primary" android:contentDescription="Profile"/>
-        <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@drawable/baseline_shopping_cart_24" app:tint="@color/gray_text" android:contentDescription="Cart"/>
+        <ImageView
+            android:id="@+id/navHome"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_home"
+            app:tint="@color/gray_text"
+            android:layout_marginStart="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnProfileAction"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_marginEnd="16dp"
-            android:backgroundTint="@color/teal_primary"
+            android:layout_height="48dp"
             android:text="Profile"
             android:textColor="@color/white"
-            android:textAllCaps="false"/>
-    </LinearLayout>
+            android:textAllCaps="false"
+            android:backgroundTint="@color/teal_primary"
+            app:icon="@drawable/baseline_person_24"
+            app:iconTint="@color/white"
+            app:iconSize="24dp"
+            app:iconPadding="8dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageView
+            android:id="@+id/navBell"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/baseline_notifications_24"
+            app:tint="@color/gray_text"
+            app:layout_constraintStart_toEndOf="@id/navHome"
+            app:layout_constraintEnd_toStartOf="@id/navCart"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageView
+            android:id="@+id/navCart"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/baseline_shopping_cart_24"
+            app:tint="@color/gray_text"
+            app:layout_constraintStart_toEndOf="@id/navBell"
+            app:layout_constraintEnd_toStartOf="@id/btnProfileAction"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
